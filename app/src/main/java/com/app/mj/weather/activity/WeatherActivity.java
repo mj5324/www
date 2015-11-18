@@ -29,6 +29,7 @@ public class WeatherActivity extends Activity implements OnClickListener{
 	private TextView tempText;
 	private TextView currentDateText;
 
+
 	private Button switchCity;
 	private Button refreshWeather;
 
