@@ -1,0 +1,153 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:62), pid=3980, tid=5812
+#
+# JRE version:  (8.0_31-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.31-b07 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002350800):  JavaThread "Unknown thread" [_thread_in_vm, id=5812, stack(0x0000000002240000,0x0000000002340000)]
+
+Stack: [0x0000000002240000,0x0000000002340000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x3169ba]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002350800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=5812, stack(0x0000000002240000,0x0000000002340000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 28672K, used 491K [0x00000000eab00000, 0x00000000ecb00000, 0x0000000100000000)
+  eden space 24576K, 2% used [0x00000000eab00000,0x00000000eab7ae20,0x00000000ec300000)
+  from space 4096K, 0% used [0x00000000ec700000,0x00000000ec700000,0x00000000ecb00000)
+  to   space 4096K, 0% used [0x00000000ec300000,0x00000000ec300000,0x00000000ec700000)
+ ParOldGen       total 65536K, used 0K [0x00000000c0000000, 0x00000000c4000000, 0x00000000eab00000)
+  object space 65536K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c4000000)
+ Metaspace       used 677K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 67K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011820000,0x0000000011a30000] byte_map_base: 0x0000000011220000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005ee3d4f0
+ Begin Bits: [0x0000000011f90000, 0x0000000012f90000)
+ End Bits:   [0x0000000012f90000, 0x0000000013f90000)
+
+Polling page: 0x0000000001d80000
+
+CodeCache: size=245760Kb used=327Kb max_used=327Kb free=245432Kb
+ bounds [0x0000000002460000, 0x00000000026d0000, 0x0000000011460000]
+ total_blobs=56 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.027 loading class java/lang/Short
+Event: 0.027 loading class java/lang/Short done
+Event: 0.027 loading class java/lang/Integer
+Event: 0.027 loading class java/lang/Integer done
+Event: 0.027 loading class java/lang/Long
+Event: 0.028 loading class java/lang/Long done
+Event: 0.028 loading class java/lang/NullPointerException
+Event: 0.028 loading class java/lang/NullPointerException done
+Event: 0.028 loading class java/lang/ArithmeticException
+Event: 0.028 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff7ff730000 - 0x00007ff7ff764000 	C:\Program Files\Java\jdk1.8.0_31\bin\java.exe
+0x00007fff11f40000 - 0x00007fff12101000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007fff10110000 - 0x00007fff101bd000 	C:\Windows\system32\KERNEL32.DLL
+0x00007fff0f430000 - 0x00007fff0f60d000 	C:\Windows\system32\KERNELBASE.dll
+0x00007fff10220000 - 0x00007fff102c6000 	C:\Windows\system32\ADVAPI32.dll
+0x00007fff0fac0000 - 0x00007fff0fb5d000 	C:\Windows\system32\msvcrt.dll
+0x00007fff0f6d0000 - 0x00007fff0f72b000 	C:\Windows\system32\sechost.dll
+0x00007fff0f990000 - 0x00007fff0fab6000 	C:\Windows\system32\RPCRT4.dll
+0x00007fff10640000 - 0x00007fff1078e000 	C:\Windows\system32\USER32.dll
+0x00007fff0fb60000 - 0x00007fff0fce6000 	C:\Windows\system32\GDI32.dll
+0x00007fff03e40000 - 0x00007fff040b4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10240.16384_none_f41f7b285750ef43\COMCTL32.dll
+0x00007fff10060000 - 0x00007fff10096000 	C:\Windows\system32\IMM32.DLL
+0x00007fff0fcf0000 - 0x00007fff0fe4c000 	C:\Windows\system32\MSCTF.dll
+0x00007fff0e860000 - 0x00007fff0e891000 	C:\Windows\system32\nvinitx.dll
+0x00007fff0e850000 - 0x00007fff0e85a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x000000005e580000 - 0x000000005e652000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\msvcr100.dll
+0x000000005e660000 - 0x000000005eeba000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\server\jvm.dll
+0x00007fff10480000 - 0x00007fff10488000 	C:\Windows\system32\PSAPI.DLL
+0x00007fff0b100000 - 0x00007fff0b109000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007fff0ca70000 - 0x00007fff0ca93000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007fff100a0000 - 0x00007fff10109000 	C:\Windows\system32\WS2_32.dll
+0x00007fff0fe60000 - 0x00007fff0fe68000 	C:\Windows\system32\NSI.dll
+0x00000000021f0000 - 0x000000000221c000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007fff0ebe0000 - 0x00007fff0ec24000 	C:\Windows\system32\cfgmgr32.dll
+0x00007fff0d1f0000 - 0x00007fff0d217000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x000000005e570000 - 0x000000005e57f000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\verify.dll
+0x000000005e540000 - 0x000000005e568000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\java.dll
+0x000000005e520000 - 0x000000005e536000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\zip.dll
+0x00007fff081a0000 - 0x00007fff0832a000 	C:\Windows\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Xmx1024M -Dfile.encoding=GBK -Duser.country=CN -Duser.language=zh -Duser.variant 
+java_command: com.android.dx.command.Main --dex --output D:\Android\Weather\app\build\intermediates\dex\debug D:\Android\Weather\app\build\intermediates\classes\debug
+java_class_path (initial): C:\Users\mj\AppData\Local\Android\sdk\build-tools\23.0.1\lib\dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_31
+CLASSPATH=.;C:\Program Files\Java\jdk1.8.0_31\lib\;C:\Program Files\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\lib;
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_31;C:\Program Files\Java\jdk1.8.0_31\bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5.4 & MySQL Utilities 1.5.4 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5.4 & MySQL Utilities 1.5.4 1.5\Doctrine extensions for PHP\;C:\ProgramData\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_31;C:\Program Files\Java\jdk1.8.0_31\bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5.4 & MySQL Utilities 1.5.4 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5.4 & MySQL Utilities 1.5.4 1.5\Doctrine extensions for PHP\
+USERNAME=mj
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 6238044k(474624k free), swap 6238044k(4752k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.31-b07) for windows-amd64 JRE (1.8.0_31-b13), built on Dec 17 2014 21:00:28 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Nov 16 23:55:38 2015
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
